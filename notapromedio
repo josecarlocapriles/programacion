@@ -1,0 +1,24 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+	void main()
+{
+	
+	float x,y,z,w,h,j;
+	cout<< "ingrese la nota del primer parcial ";
+	cin>> x;
+	cout<< "ingrese la nota del segundo parcial ";
+	cin>> y;
+	cout<< "ingrese la nota del tercer parcial ";
+	cin>> z;
+	cout<< "ingrese la nota practica ";
+	cin>> w;
+	cout<< "ingrese la nota del examen final ";
+	cin>> h;
+
+	j=(((x+y+z)/3)*0.4)+w*0.2+h*0.4;
+	cout<<"la nota final es " <<j;
+	getch();
+}
