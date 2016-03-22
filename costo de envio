@@ -1,0 +1,44 @@
+#include "stdafx.h"
+#include<iostream>
+#include "conio.h"
+using namespace std;
+
+
+int main() {
+	float costo;
+	float peso;
+	cout << "ingrese el peso" << endl;
+	cin >> peso;
+	if ((peso<0)) {
+		cout << "valor Invalido" << endl;
+	} else {
+		if ((peso<50)) {
+			costo = peso*1.5;
+			cout << "el costo es " << costo << endl;
+		} else {
+			if ((peso<=100)) {
+				costo = peso*4;
+				cout << "el costo es " << costo << endl;
+			} else {
+				if ((peso<=200)) {
+					costo = peso*6;
+					cout << "el costo es " << costo << endl;
+				} else {
+					if ((peso<=350)) {
+						costo = peso*10.5;
+						cout << "el costo es " << costo << endl;
+					} else {
+						if ((peso<=500)) {
+							costo = peso*15;
+							cout << "el costo es " << costo << endl;
+						} else {
+							cout << "no se puede enviar" << endl;
+						}
+					}
+				}
+			}
+		}
+	}
+	getch();
+	return 0;
+}
