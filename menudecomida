@@ -1,5 +1,7 @@
 //Menu de Comida
 
+
+
 #include "stdafx.h"
 #include <iostream>
 #include "conio.h"
@@ -47,10 +49,10 @@ void main()
 				cout << "El costo Parcial es: " << r <<endl;
 				s = s + r;
 				break;
-		case 0: cout << "Salir";break;
+		case 0: cout << "Salir" << endl;break;
 	    default: cout << "Opcion invalida" << endl;
-     }
-     cout << "El Costo Total es " << s << endl;
+		}
 	 } while (opcion != 0);
+		cout << "El Costo Total es " << s << endl;
      getch();
 }
