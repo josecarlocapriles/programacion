@@ -1,0 +1,46 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+#include <stdlib.h>
+
+using namespace std;
+void main(){
+	int opcion, nf, npf, c;
+	double e1, e2, ef, np;
+	char m;
+	npf =0;
+	c = 1;
+	cout << "Bienvenido a el Calculo de Notas" << endl;
+	do{		cout << "Ingrese la Nota del Examen Parcial 1: ";
+			cin >> e1;
+			if (e1>0 && e1<=100) {
+				cout << "Ingrese la Nota del Examen Parcial 2: ";
+				cin >> e2;
+				if (e2>0 && e2<=100) {
+					cout << "Ingrese la Nota Practica: ";
+					cin >> np;
+					if (np>0 && np<=100) {
+						cout << "Ingrese la Nota del Examen Final: ";
+						cin >> ef;
+						if (ef>0 && ef<=100) {
+							nf = ((e1 + e2 + np + (2 * ef)) * 0.2);
+							cout << "Nota Final: " << nf << endl;
+							npf = npf + nf;
+							c++; 
+						}
+						else cout << "Valor Invalido" << endl;
+					}
+					else cout << "Valor Invalido" << endl;
+				}
+				else cout << "Valor Invalido" << endl;
+			}
+			else cout << "Valor Invalido" << endl;
+			cout << "Desea Continuar? " << endl;
+			cin >> m;
+	} while (m!='n');
+	system ("cls");
+	cout << "La Nota Promedio es: " << (npf / (c - 1)) << endl;
+	cout << "Presione Cualquier Tecla Para Salir";
+	_getch();
+}
