@@ -1,0 +1,18 @@
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+
+float val_ganado(float h, float c);
+using namespace std;
+int main() {
+    float horas, costo, sueldo;	
+    cout <<"Ingrese el numero de horas:" ; cin >> horas;	
+    cout <<"Ingrese el costo por hora:"; cin >> costo;	
+    sueldo= val_ganado(horas,costo);
+    cout <<"El total ganado es:" <<sueldo;    
+    getch();
+	return 0;
+ }
+float val_ganado (float h, float c)
+ { float g= h*c ;	
+    return g;    }
