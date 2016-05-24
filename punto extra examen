@@ -1,0 +1,47 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+
+void main ()
+{
+	int n,vector[100],aux,matriz[100][100],vectorac[100],tam;
+	cout<<"Ingrese el numero de elementos: ";
+	cin>>n;
+	tam=n;
+	for(int i=0;i<n;i++){
+		cin>>vector[i];
+	}
+	cout<<endl;
+	for (int k=0;k<n-1;k++){
+		for(int j=k+1;j<n;j++){
+			if(vector[j]<vector[k]){
+				aux=vector[j];
+				vector[j]=vector[k];
+				vector[k]=aux;
+			}
+		}
+	}
+	for(int i=0;i<n;i++){
+		cout<<vector[i]<<endl;
+	}
+	cout<<endl;
+	vectorac[0]=vector[0];
+	for(int i=0;i<n-1;i++){
+		for(int j=i+1;j<n;j++){
+			if(vectorac[i]==vector[i+1]){
+				vectorac[j]=vector[j+1];
+				tam=tam-1;
+				i++;
+			}
+			else vectorac[j]=vector[j];
+		}
+	}
+	for (int i=0;i<tam;i++){
+		cout<<vectorac[i]<<endl;
+	}
+	getch();
+}
